@@ -48,13 +48,12 @@ p{
 .btn-primary {
     color: black;
     background-color: red;
-    border-color: black;
+    
 }
 
 .btn-primary:hover {
     color: black;
     background-color: orange;
-    border-color: black;
 }
 
 .timer-p {

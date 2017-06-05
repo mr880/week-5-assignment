@@ -3,7 +3,7 @@ var gameHTML;
 var counter = 30;
 
 var questions = ["What color is Kyle's hair?", "Mr. Hankey is a ____ poo.", "What band played a part in Cartman's scheme to feed Scott Tennorman's parents to him at the Chili Con Carnival", "Wendy is whose girlfriend?", "Mr. Garison had sex with this evolutionary biologist.", "Who created Southpark?", "What state does Southpark take place in?", "'Ample parking day or night, people shouting ____'"];
-var answerArray = [["Ginger", "Brown", "Black", "Blonde"], ["Friendly","Christmas","Stinky","Holiday"], ["Red Hot Chili Peppers", "U2", "Radiohead", "Paramore"], ["Kyle's","Cartman's","Stan's","Butter's"], ["Sam Harris", "Charles Darwin", "Christopher Walken", "Richard Dawkins"], ["Matt Stone and Trey Parker","Fred","Stan Marsh and Kyle Brothsloski","Seth Macfarlane"], ["Alaska", "Colorado", "New Jersey", "West Virgina"], ["Welcome Partner!","Southpark's Awesome!","Sheety Wall!","Howdy Neighbor!"]];
+var answerArray = [["Ginger", "Brown", "Black", "Blonde"], ["Friendly","Christmas","Stinky","Holiday"], ["Red Hot Chili Peppers", "U2", "Radiohead", "Paramore"], ["Kyle's","Cartman's","Stan's","Butter's"], ["Sam Harris", "Charles Darwin", "Christopher Walken", "Richard Dawkins"], ["Matt Stone and Trey Parker","Fred","Stan Marsh and Kyle Brofsloski","Seth Macfarlane"], ["Alaska", "Colorado", "New Jersey", "West Virgina"], ["Welcome Partner!","Southpark's Awesome!","Sheety Wall!","Howdy Neighbor!"]];
 var imageArray = ["<img class='center-block img-right' src='images/kyle.png'>", "<img class='center-block img-right' src='images/hankey.gif'>", "<img class='center-block img-right' src='images/radiohead.gif'>", "<img class='center-block img-right' src='images/StanMarsh.png'>", "<img class='center-block img-right' src='images/dawkins.jpg'>", "<img class='center-block img-right' src='images/mattTrey.gif'>", "<img class='center-block img-right' src='images/colorado.jpg'>", "<img class='center-block img-right' src='images/song.jpg'>"];
 var correctAnswers = ["A. Ginger", "B. Christmas", "C. Radiohead", "C. Stan's", "D. Richard Dawkins", "A. Matt Stone and Trey Parker", "B. Colorado", "D. Howdy Neighbor!"];
 
@@ -72,7 +72,7 @@ function win() {
 }
 
 function loss() {
-    numCorrect++;
+    numIncorrect++;
     gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! The correct answer is: "+ correctAnswers[i] + "</p>" + "<img class='center-block img-wrong' src='img/x.png'>" + "<img class='center-block img-right' src='images/incorrect.gif'>";
     $(".mainArea").html(gameHTML);
     setTimeout(pause, 4000); 
